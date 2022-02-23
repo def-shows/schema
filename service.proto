@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "model.proto";
 
-option go_package = "def-shows/schema";
+option go_package = "github.com/def-shows/schema";
 
 message ListCountriesRequest {
 	string title = 1;

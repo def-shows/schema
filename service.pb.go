@@ -7,7 +7,6 @@
 package schema
 
 import (
-	schema "github.com/def-shows/schema"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -73,7 +72,7 @@ type ListCountriesResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CountryList []*schema.Country `protobuf:"bytes,1,rep,name=country_list,json=countryList,proto3" json:"country_list,omitempty"`
+	CountryList []*Country `protobuf:"bytes,1,rep,name=country_list,json=countryList,proto3" json:"country_list,omitempty"`
 }
 
 func (x *ListCountriesResponse) Reset() {
@@ -108,7 +107,7 @@ func (*ListCountriesResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *ListCountriesResponse) GetCountryList() []*schema.Country {
+func (x *ListCountriesResponse) GetCountryList() []*Country {
 	if x != nil {
 		return x.CountryList
 	}
@@ -167,7 +166,7 @@ type GetCountryResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Country *schema.Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
+	Country *Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
 }
 
 func (x *GetCountryResponse) Reset() {
@@ -202,7 +201,7 @@ func (*GetCountryResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *GetCountryResponse) GetCountry() *schema.Country {
+func (x *GetCountryResponse) GetCountry() *Country {
 	if x != nil {
 		return x.Country
 	}
@@ -214,7 +213,7 @@ type CreateCountryRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Country *schema.Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
+	Country *Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
 }
 
 func (x *CreateCountryRequest) Reset() {
@@ -249,7 +248,7 @@ func (*CreateCountryRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *CreateCountryRequest) GetCountry() *schema.Country {
+func (x *CreateCountryRequest) GetCountry() *Country {
 	if x != nil {
 		return x.Country
 	}
@@ -261,7 +260,7 @@ type CreateCountryResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Country *schema.Country `protobuf:"bytes,1,opt,name=Country,proto3" json:"Country,omitempty"`
+	Country *Country `protobuf:"bytes,1,opt,name=Country,proto3" json:"Country,omitempty"`
 }
 
 func (x *CreateCountryResponse) Reset() {
@@ -296,7 +295,7 @@ func (*CreateCountryResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *CreateCountryResponse) GetCountry() *schema.Country {
+func (x *CreateCountryResponse) GetCountry() *Country {
 	if x != nil {
 		return x.Country
 	}
@@ -308,7 +307,7 @@ type UpdateCountryRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Country *schema.Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
+	Country *Country `protobuf:"bytes,1,opt,name=country,proto3" json:"country,omitempty"`
 }
 
 func (x *UpdateCountryRequest) Reset() {
@@ -343,7 +342,7 @@ func (*UpdateCountryRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *UpdateCountryRequest) GetCountry() *schema.Country {
+func (x *UpdateCountryRequest) GetCountry() *Country {
 	if x != nil {
 		return x.Country
 	}
@@ -357,7 +356,7 @@ type UpdateCountryResponse struct {
 
 	Success bool              `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 	Errors  map[string]string `protobuf:"bytes,2,rep,name=errors,proto3" json:"errors,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Country *schema.Country   `protobuf:"bytes,3,opt,name=country,proto3" json:"country,omitempty"`
+	Country *Country          `protobuf:"bytes,3,opt,name=country,proto3" json:"country,omitempty"`
 }
 
 func (x *UpdateCountryResponse) Reset() {
@@ -406,7 +405,7 @@ func (x *UpdateCountryResponse) GetErrors() map[string]string {
 	return nil
 }
 
-func (x *UpdateCountryResponse) GetCountry() *schema.Country {
+func (x *UpdateCountryResponse) GetCountry() *Country {
 	if x != nil {
 		return x.Country
 	}
@@ -550,7 +549,7 @@ type ListGenresResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	GenreList []*schema.Genre `protobuf:"bytes,1,rep,name=genre_list,json=genreList,proto3" json:"genre_list,omitempty"`
+	GenreList []*Genre `protobuf:"bytes,1,rep,name=genre_list,json=genreList,proto3" json:"genre_list,omitempty"`
 }
 
 func (x *ListGenresResponse) Reset() {
@@ -585,7 +584,7 @@ func (*ListGenresResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *ListGenresResponse) GetGenreList() []*schema.Genre {
+func (x *ListGenresResponse) GetGenreList() []*Genre {
 	if x != nil {
 		return x.GenreList
 	}
@@ -644,7 +643,7 @@ type GetGenreResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Genre *schema.Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
+	Genre *Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
 }
 
 func (x *GetGenreResponse) Reset() {
@@ -679,7 +678,7 @@ func (*GetGenreResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{13}
 }
 
-func (x *GetGenreResponse) GetGenre() *schema.Genre {
+func (x *GetGenreResponse) GetGenre() *Genre {
 	if x != nil {
 		return x.Genre
 	}
@@ -691,7 +690,7 @@ type CreateGenreRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Genre *schema.Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
+	Genre *Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
 }
 
 func (x *CreateGenreRequest) Reset() {
@@ -726,7 +725,7 @@ func (*CreateGenreRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{14}
 }
 
-func (x *CreateGenreRequest) GetGenre() *schema.Genre {
+func (x *CreateGenreRequest) GetGenre() *Genre {
 	if x != nil {
 		return x.Genre
 	}
@@ -738,7 +737,7 @@ type CreateGenreResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Genre *schema.Genre `protobuf:"bytes,1,opt,name=Genre,proto3" json:"Genre,omitempty"`
+	Genre *Genre `protobuf:"bytes,1,opt,name=Genre,proto3" json:"Genre,omitempty"`
 }
 
 func (x *CreateGenreResponse) Reset() {
@@ -773,7 +772,7 @@ func (*CreateGenreResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{15}
 }
 
-func (x *CreateGenreResponse) GetGenre() *schema.Genre {
+func (x *CreateGenreResponse) GetGenre() *Genre {
 	if x != nil {
 		return x.Genre
 	}
@@ -785,7 +784,7 @@ type UpdateGenreRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Genre *schema.Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
+	Genre *Genre `protobuf:"bytes,1,opt,name=genre,proto3" json:"genre,omitempty"`
 }
 
 func (x *UpdateGenreRequest) Reset() {
@@ -820,7 +819,7 @@ func (*UpdateGenreRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{16}
 }
 
-func (x *UpdateGenreRequest) GetGenre() *schema.Genre {
+func (x *UpdateGenreRequest) GetGenre() *Genre {
 	if x != nil {
 		return x.Genre
 	}
@@ -834,7 +833,7 @@ type UpdateGenreResponse struct {
 
 	Success bool              `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 	Errors  map[string]string `protobuf:"bytes,2,rep,name=errors,proto3" json:"errors,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Genre   *schema.Genre     `protobuf:"bytes,3,opt,name=genre,proto3" json:"genre,omitempty"`
+	Genre   *Genre            `protobuf:"bytes,3,opt,name=genre,proto3" json:"genre,omitempty"`
 }
 
 func (x *UpdateGenreResponse) Reset() {
@@ -883,7 +882,7 @@ func (x *UpdateGenreResponse) GetErrors() map[string]string {
 	return nil
 }
 
-func (x *UpdateGenreResponse) GetGenre() *schema.Genre {
+func (x *UpdateGenreResponse) GetGenre() *Genre {
 	if x != nil {
 		return x.Genre
 	}
@@ -1027,7 +1026,7 @@ type ListKeywordsResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	KeywordList []*schema.Keyword `protobuf:"bytes,1,rep,name=keyword_list,json=keywordList,proto3" json:"keyword_list,omitempty"`
+	KeywordList []*Keyword `protobuf:"bytes,1,rep,name=keyword_list,json=keywordList,proto3" json:"keyword_list,omitempty"`
 }
 
 func (x *ListKeywordsResponse) Reset() {
@@ -1062,7 +1061,7 @@ func (*ListKeywordsResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{21}
 }
 
-func (x *ListKeywordsResponse) GetKeywordList() []*schema.Keyword {
+func (x *ListKeywordsResponse) GetKeywordList() []*Keyword {
 	if x != nil {
 		return x.KeywordList
 	}
@@ -1121,7 +1120,7 @@ type GetKeywordResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword *schema.Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
+	Keyword *Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
 }
 
 func (x *GetKeywordResponse) Reset() {
@@ -1156,7 +1155,7 @@ func (*GetKeywordResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{23}
 }
 
-func (x *GetKeywordResponse) GetKeyword() *schema.Keyword {
+func (x *GetKeywordResponse) GetKeyword() *Keyword {
 	if x != nil {
 		return x.Keyword
 	}
@@ -1168,7 +1167,7 @@ type CreateKeywordRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword *schema.Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
+	Keyword *Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
 }
 
 func (x *CreateKeywordRequest) Reset() {
@@ -1203,7 +1202,7 @@ func (*CreateKeywordRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{24}
 }
 
-func (x *CreateKeywordRequest) GetKeyword() *schema.Keyword {
+func (x *CreateKeywordRequest) GetKeyword() *Keyword {
 	if x != nil {
 		return x.Keyword
 	}
@@ -1215,7 +1214,7 @@ type CreateKeywordResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword *schema.Keyword `protobuf:"bytes,1,opt,name=Keyword,proto3" json:"Keyword,omitempty"`
+	Keyword *Keyword `protobuf:"bytes,1,opt,name=Keyword,proto3" json:"Keyword,omitempty"`
 }
 
 func (x *CreateKeywordResponse) Reset() {
@@ -1250,7 +1249,7 @@ func (*CreateKeywordResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{25}
 }
 
-func (x *CreateKeywordResponse) GetKeyword() *schema.Keyword {
+func (x *CreateKeywordResponse) GetKeyword() *Keyword {
 	if x != nil {
 		return x.Keyword
 	}
@@ -1262,7 +1261,7 @@ type UpdateKeywordRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword *schema.Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
+	Keyword *Keyword `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
 }
 
 func (x *UpdateKeywordRequest) Reset() {
@@ -1297,7 +1296,7 @@ func (*UpdateKeywordRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{26}
 }
 
-func (x *UpdateKeywordRequest) GetKeyword() *schema.Keyword {
+func (x *UpdateKeywordRequest) GetKeyword() *Keyword {
 	if x != nil {
 		return x.Keyword
 	}
@@ -1311,7 +1310,7 @@ type UpdateKeywordResponse struct {
 
 	Success bool              `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 	Errors  map[string]string `protobuf:"bytes,2,rep,name=errors,proto3" json:"errors,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Keyword *schema.Keyword   `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`
+	Keyword *Keyword          `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`
 }
 
 func (x *UpdateKeywordResponse) Reset() {
@@ -1360,7 +1359,7 @@ func (x *UpdateKeywordResponse) GetErrors() map[string]string {
 	return nil
 }
 
-func (x *UpdateKeywordResponse) GetKeyword() *schema.Keyword {
+func (x *UpdateKeywordResponse) GetKeyword() *Keyword {
 	if x != nil {
 		return x.Keyword
 	}
@@ -1504,7 +1503,7 @@ type ListBroadcastersResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BroadcasterList []*schema.Broadcaster `protobuf:"bytes,1,rep,name=broadcaster_list,json=broadcasterList,proto3" json:"broadcaster_list,omitempty"`
+	BroadcasterList []*Broadcaster `protobuf:"bytes,1,rep,name=broadcaster_list,json=broadcasterList,proto3" json:"broadcaster_list,omitempty"`
 }
 
 func (x *ListBroadcastersResponse) Reset() {
@@ -1539,7 +1538,7 @@ func (*ListBroadcastersResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{31}
 }
 
-func (x *ListBroadcastersResponse) GetBroadcasterList() []*schema.Broadcaster {
+func (x *ListBroadcastersResponse) GetBroadcasterList() []*Broadcaster {
 	if x != nil {
 		return x.BroadcasterList
 	}
@@ -1598,7 +1597,7 @@ type GetBroadcasterResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Broadcaster *schema.Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
+	Broadcaster *Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
 }
 
 func (x *GetBroadcasterResponse) Reset() {
@@ -1633,7 +1632,7 @@ func (*GetBroadcasterResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{33}
 }
 
-func (x *GetBroadcasterResponse) GetBroadcaster() *schema.Broadcaster {
+func (x *GetBroadcasterResponse) GetBroadcaster() *Broadcaster {
 	if x != nil {
 		return x.Broadcaster
 	}
@@ -1645,7 +1644,7 @@ type CreateBroadcasterRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Broadcaster *schema.Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
+	Broadcaster *Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
 }
 
 func (x *CreateBroadcasterRequest) Reset() {
@@ -1680,7 +1679,7 @@ func (*CreateBroadcasterRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{34}
 }
 
-func (x *CreateBroadcasterRequest) GetBroadcaster() *schema.Broadcaster {
+func (x *CreateBroadcasterRequest) GetBroadcaster() *Broadcaster {
 	if x != nil {
 		return x.Broadcaster
 	}
@@ -1692,7 +1691,7 @@ type CreateBroadcasterResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Broadcaster *schema.Broadcaster `protobuf:"bytes,1,opt,name=Broadcaster,proto3" json:"Broadcaster,omitempty"`
+	Broadcaster *Broadcaster `protobuf:"bytes,1,opt,name=Broadcaster,proto3" json:"Broadcaster,omitempty"`
 }
 
 func (x *CreateBroadcasterResponse) Reset() {
@@ -1727,7 +1726,7 @@ func (*CreateBroadcasterResponse) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{35}
 }
 
-func (x *CreateBroadcasterResponse) GetBroadcaster() *schema.Broadcaster {
+func (x *CreateBroadcasterResponse) GetBroadcaster() *Broadcaster {
 	if x != nil {
 		return x.Broadcaster
 	}
@@ -1739,7 +1738,7 @@ type UpdateBroadcasterRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Broadcaster *schema.Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
+	Broadcaster *Broadcaster `protobuf:"bytes,1,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
 }
 
 func (x *UpdateBroadcasterRequest) Reset() {
@@ -1774,7 +1773,7 @@ func (*UpdateBroadcasterRequest) Descriptor() ([]byte, []int) {
 	return file_service_proto_rawDescGZIP(), []int{36}
 }
 
-func (x *UpdateBroadcasterRequest) GetBroadcaster() *schema.Broadcaster {
+func (x *UpdateBroadcasterRequest) GetBroadcaster() *Broadcaster {
 	if x != nil {
 		return x.Broadcaster
 	}
@@ -1786,9 +1785,9 @@ type UpdateBroadcasterResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Success     bool                `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
-	Errors      map[string]string   `protobuf:"bytes,2,rep,name=errors,proto3" json:"errors,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Broadcaster *schema.Broadcaster `protobuf:"bytes,3,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
+	Success     bool              `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	Errors      map[string]string `protobuf:"bytes,2,rep,name=errors,proto3" json:"errors,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Broadcaster *Broadcaster      `protobuf:"bytes,3,opt,name=broadcaster,proto3" json:"broadcaster,omitempty"`
 }
 
 func (x *UpdateBroadcasterResponse) Reset() {
@@ -1837,7 +1836,7 @@ func (x *UpdateBroadcasterResponse) GetErrors() map[string]string {
 	return nil
 }
 
-func (x *UpdateBroadcasterResponse) GetBroadcaster() *schema.Broadcaster {
+func (x *UpdateBroadcasterResponse) GetBroadcaster() *Broadcaster {
 	if x != nil {
 		return x.Broadcaster
 	}
@@ -2119,9 +2118,9 @@ var file_service_proto_rawDesc = []byte{
 	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x69, 0x65, 0x73, 0x12, 0x15, 0x2e, 0x4c, 0x69, 0x73, 0x74,
 	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x69, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x1a, 0x16, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x69, 0x65, 0x73,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x12, 0x5a, 0x10, 0x64, 0x65, 0x66, 0x2d,
-	0x73, 0x68, 0x6f, 0x77, 0x73, 0x2f, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x1d, 0x5a, 0x1b, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x64, 0x65, 0x66, 0x2d, 0x73, 0x68, 0x6f, 0x77, 0x73,
+	0x2f, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2182,10 +2181,10 @@ var file_service_proto_goTypes = []interface{}{
 	nil,                               // 41: UpdateGenreResponse.ErrorsEntry
 	nil,                               // 42: UpdateKeywordResponse.ErrorsEntry
 	nil,                               // 43: UpdateBroadcasterResponse.ErrorsEntry
-	(*schema.Country)(nil),            // 44: Country
-	(*schema.Genre)(nil),              // 45: Genre
-	(*schema.Keyword)(nil),            // 46: Keyword
-	(*schema.Broadcaster)(nil),        // 47: Broadcaster
+	(*Country)(nil),                   // 44: Country
+	(*Genre)(nil),                     // 45: Genre
+	(*Keyword)(nil),                   // 46: Keyword
+	(*Broadcaster)(nil),               // 47: Broadcaster
 }
 var file_service_proto_depIdxs = []int32{
 	44, // 0: ListCountriesResponse.country_list:type_name -> Country
@@ -2230,6 +2229,7 @@ func file_service_proto_init() {
 	if File_service_proto != nil {
 		return
 	}
+	file_model_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ListCountriesRequest); i {
