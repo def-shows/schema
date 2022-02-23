@@ -1,0 +1,135 @@
+syntax = "proto3";
+
+import "model.proto";
+
+option go_package = "def-shows/schema";
+
+message ListCountriesRequest {
+	string title = 1;
+}
+message ListCountriesResponse {
+	repeated Country country_list = 1;
+}
+message GetCountryRequest {
+	int32 id = 1;
+}
+message GetCountryResponse {
+	Country country = 1;
+}
+message CreateCountryRequest {
+	Country country = 1;
+}
+message CreateCountryResponse {
+	Country Country = 1;
+}
+message UpdateCountryRequest {
+	Country country = 1;
+}
+message UpdateCountryResponse {
+	bool success = 1;
+	map<string, string> errors = 2;
+	Country country = 3;
+}
+message DeleteCountryRequest {
+	int32 id = 1;
+}
+message DeleteCountryResponse {
+	bool success = 1;
+}
+
+message ListGenresRequest {}
+message ListGenresResponse {
+	repeated Genre genre_list = 1;
+}
+message GetGenreRequest {
+	int32 id = 1;
+}
+message GetGenreResponse {
+	Genre genre = 1;
+}
+message CreateGenreRequest {
+	Genre genre = 1;
+}
+message CreateGenreResponse {
+	Genre Genre = 1;
+}
+message UpdateGenreRequest {
+	Genre genre = 1;
+}
+message UpdateGenreResponse {
+	bool success = 1;
+	map<string, string> errors = 2;
+	Genre genre = 3;
+}
+message DeleteGenreRequest {
+	int32 id = 1;
+}
+message DeleteGenreResponse {
+	bool success = 1;
+}
+
+message ListKeywordsRequest {}
+message ListKeywordsResponse {
+	repeated Keyword keyword_list = 1;
+}
+message GetKeywordRequest {
+	int32 id = 1;
+}
+message GetKeywordResponse {
+	Keyword keyword = 1;
+}
+message CreateKeywordRequest {
+	Keyword keyword = 1;
+}
+message CreateKeywordResponse {
+	Keyword Keyword = 1;
+}
+message UpdateKeywordRequest {
+	Keyword keyword = 1;
+}
+message UpdateKeywordResponse {
+	bool success = 1;
+	map<string, string> errors = 2;
+	Keyword keyword = 3;
+}
+message DeleteKeywordRequest {
+	int32 id = 1;
+}
+message DeleteKeywordResponse {
+	bool success = 1;
+}
+
+message ListBroadcastersRequest {}
+message ListBroadcastersResponse {
+	repeated Broadcaster broadcaster_list = 1;
+}
+message GetBroadcasterRequest {
+	int32 id = 1;
+}
+message GetBroadcasterResponse {
+	Broadcaster broadcaster = 1;
+}
+message CreateBroadcasterRequest {
+	Broadcaster broadcaster = 1;
+}
+message CreateBroadcasterResponse {
+	Broadcaster Broadcaster = 1;
+}
+message UpdateBroadcasterRequest {
+	Broadcaster broadcaster = 1;
+}
+message UpdateBroadcasterResponse {
+	bool success = 1;
+	map<string, string> errors = 2;
+	Broadcaster broadcaster = 3;
+}
+message DeleteBroadcasterRequest {
+	int32 id = 1;
+}
+message DeleteBroadcasterResponse {
+	bool success = 1;
+}
+
+service CountryService {
+	rpc ListCountries(ListCountriesRequest) returns (ListCountriesResponse);
+}
