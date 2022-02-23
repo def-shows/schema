@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "model.proto";
 
+package storage;
 option go_package = "github.com/def-shows/schema";
 
 message ListCountriesRequest {
@@ -132,4 +133,10 @@ message DeleteBroadcasterResponse {
 
 service CountryService {
 	rpc ListCountries(ListCountriesRequest) returns (ListCountriesResponse);
+	rpc GetCountry(GetCountryRequest) returns (GetCountryResponse);
+	rpc CreateCountry(GetCountryRequest) returns (GetCountryResponse);
+	rpc UpdateCountry(UpdateCountryRequest) returns (UpdateCountryResponse);
+	rpc DeleteCountry(DeleteCountryRequest) returns (DeleteCountryResponse);
+
+
 }

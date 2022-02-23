@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
+package storage;
 option go_package = "github.com/def-shows/schema";
 
 message Country {
